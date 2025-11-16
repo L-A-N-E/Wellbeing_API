@@ -20,6 +20,7 @@ Este projeto foi desenvolvido em parceria com o **Adeptus**, um site e aplicativ
 
 ## ✨ Sumário
 
+-   [Grupo](#-grupo)
 -   [Visão Geral](#-visão-geral)
 -   [Como Executar](#-como-executar)
 -   [Arquitetura e Estrutura do
@@ -33,6 +34,13 @@ Este projeto foi desenvolvido em parceria com o **Adeptus**, um site e aplicativ
     -   [Decisões de Arquitetura](#decisões-de-arquitetura)
     -   [Futuras Expansões](#futuras-expansões)
 -   [Links Úteis](#-links-úteis)
+
+------------------------------------------------------------------------
+
+## 👥 Grupo
+
+- **Alice Santos Bulhões:** RM554499
+- **Eduardo Oliveira Cardoso Madid:** RM556349
 
 ------------------------------------------------------------------------
 
@@ -171,5 +179,6 @@ Coleção disponível em:
 
 -   🖥️ Github
     `https://github.com/L-A-N-E/Wellbeing_API/`
+
 
 
