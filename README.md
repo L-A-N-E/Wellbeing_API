@@ -10,12 +10,6 @@ Boot](https://img.shields.io/badge/Spring%20Boot-3.5.7-brightgreen)
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
 ![License](https://img.shields.io/badge/License-MIT-purple)
 
-A **Wellbeing API** é uma API REST voltada para **saúde mental**, alinhada ao **ODS 3: Saúde e Bem-Estar**. Ela oferece um conjunto completo de funcionalidades, incluindo gerenciamento de pacientes, registros diários de bem-estar, consultas, profissionais de saúde, especialidades, condições do paciente e conteúdos de apoio.
-
-O objetivo central é promover o bem-estar mental por meio de soluções tecnológicas acessíveis, eficazes e integradas ao cotidiano do usuário. Futuramente, a plataforma contará também com um **website próprio**, ampliando a facilidade de acesso e interação.
-
-Este projeto foi desenvolvido em parceria com o **Adeptus**, um site e aplicativo dedicado à requalificação profissional. Dessa forma, a Wellbeing API se integra ao ecossistema do Adeptus para oferecer **suporte completo à saúde mental** dos seus usuários, fortalecendo o cuidado emocional durante sua jornada de desenvolvimento profissional.
-
 ------------------------------------------------------------------------
 
 ## ✨ Sumário
@@ -215,6 +209,7 @@ Coleção disponível em:
 
 -   🖥️ Github
     `https://github.com/L-A-N-E/Wellbeing_API/`
+
 
 
 
