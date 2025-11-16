@@ -21,7 +21,7 @@ Este projeto foi desenvolvido em parceria com o **Adeptus**, um site e aplicativ
 ## ✨ Sumário
 
 -   [Grupo](#-grupo)
--   [Visão Geral](#-visão-geral)
+-   [Visão Geral do Projeto](#-visão-geral-do-projeto)
 -   [Como Executar](#-como-executar)
 -   [Arquitetura e Estrutura do
     Código](#-arquitetura-e-estrutura-do-código)
@@ -44,13 +44,49 @@ Este projeto foi desenvolvido em parceria com o **Adeptus**, um site e aplicativ
 
 ------------------------------------------------------------------------
 
-## 🔎 Visão Geral
+## 🔎 Visão Geral do Projeto
 
--   ☕ **Java:** 17+
--   🌱 **Spring Boot:** 3.5.7
--   🔗 **Base URL:** `http://localhost:8080`
--   📘 **Swagger:** `/swagger-ui/index.html`
--   🗄️ **H2 Console:** `/h2-console`
+A **Wellbeing API** é uma plataforma REST construída em **Java 17** com **Spring Boot 3.5.7**, focada em promover **saúde mental** e **bem-estar** 🌱💚, totalmente alinhada ao **ODS 3: Saúde e Bem-Estar** da ONU.
+Ela funciona como o coração de um ecossistema voltado ao acompanhamento emocional, oferecendo recursos modernos, seguros e acessíveis para ajudar pessoas a cuidarem melhor de sua saúde mental.
+
+### 💡 O que a API oferece?
+
+A aplicação disponibiliza um conjunto completo de funcionalidades:
+
+* 👤 **Gerenciamento de Pacientes**
+* 📓 **Registros Diários** (humor, sono, ansiedade)
+* 🩺 **Profissionais de Saúde e Especialidades**
+* 📅 **Consultas** (agendamento, atualização, cancelamento)
+* ❤️ **Condições de Saúde Mental do Paciente**
+* 📚 **Recursos de Apoio** (artigos, vídeos, práticas)
+
+Tudo isso pensado para criar uma experiência integrada de apoio emocional.
+
+### 🤝 Parceria com o Adeptus
+
+A API faz parte do ecossistema do **Adeptus**, plataforma de requalificação profissional.
+Essa união garante aos usuários um ambiente que cuida não só da **evolução profissional**, mas também do **bem-estar mental durante toda a jornada** 🌟🧘‍♂️.
+
+### 🧩 Estrutura Forte e Flexível
+
+A base técnica do projeto inclui:
+
+* 🛠 **Arquitetura em camadas**
+* 🧪 **Validações com Bean Validation**
+* 🚨 **Tratamento centralizado de erros**
+* 🌱 **Seeds automáticos de dados**
+* 🗄️ **Banco H2 no dev e MySQL no prod**
+* 📘 **Documentação via Swagger**
+* 🔁 **DTO + Mappers para isolamento do domínio**
+
+### 🚀 Pronto para evoluir
+
+A arquitetura já foi pensada para suportar futuras melhorias, como:
+
+* 🔐 Autenticação JWT
+* 📊 Dashboards e indicadores emocionais
+* 🔔 Sistema de lembretes e notificações
+* 📈 Análises avançadas de bem-estar
 
 ------------------------------------------------------------------------
 
@@ -179,6 +215,7 @@ Coleção disponível em:
 
 -   🖥️ Github
     `https://github.com/L-A-N-E/Wellbeing_API/`
+
 
 
 
