@@ -1,0 +1,218 @@
+{
+  "info": {
+    "name": "Wellbeing API",
+    "description": "Coleção Postman com os endpoints da Wellbeing API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "d4a7d7f2-8b0b-4d25-9b9e-9b0b7aa1a001"
+  },
+  "item": [
+    {
+      "name": "Pacientes",
+      "item": [
+        {
+          "name": "Listar pacientes",
+          "request": {"method": "GET", "url": "{{baseUrl}}/pacientes"}
+        },
+        {
+          "name": "Buscar paciente por ID",
+          "request": {"method": "GET", "url": "{{baseUrl}}/pacientes/1"}
+        },
+        {
+          "name": "Criar paciente",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"João da Silva\",\n  \"cpf\": \"123.456.789-00\",\n  \"email\": \"joao@example.com\",\n  \"dataNascimento\": \"1990-05-20\"\n}"
+            },
+            "url": "{{baseUrl}}/pacientes"
+          }
+        },
+        {
+          "name": "Atualizar paciente",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"João da Silva\",\n  \"cpf\": \"123.456.789-00\",\n  \"email\": \"joao.novo@example.com\",\n  \"dataNascimento\": \"1990-05-20\"\n}"
+            },
+            "url": "{{baseUrl}}/pacientes/1"
+          }
+        },
+        {
+          "name": "Remover paciente",
+          "request": {"method": "DELETE", "url": "{{baseUrl}}/pacientes/1"}
+        }
+      ]
+    },
+    {
+      "name": "Registros Diários",
+      "item": [
+        {
+          "name": "Listar registros de um paciente",
+          "request": {"method": "GET", "url": "{{baseUrl}}/pacientes/1/registros"}
+        },
+        {
+          "name": "Criar registro para paciente",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataHora\": \"2025-12-01T09:30:00\",\n  \"humor\": 7,\n  \"emocao\": \"ansiedade\",\n  \"observacao\": \"Respiração ajudou a acalmar.\"\n}"
+            },
+            "url": "{{baseUrl}}/pacientes/1/registros"
+          }
+        },
+        {
+          "name": "Buscar registro por ID",
+          "request": {"method": "GET", "url": "{{baseUrl}}/registros/1"}
+        },
+        {
+          "name": "Atualizar registro",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataHora\": \"2025-12-01T10:00:00\",\n  \"humor\": 8,\n  \"emocao\": \"calmo\",\n  \"observacao\": \"Após caminhada.\"\n}"
+            },
+            "url": "{{baseUrl}}/registros/1"
+          }
+        },
+        {
+          "name": "Remover registro",
+          "request": {"method": "DELETE", "url": "{{baseUrl}}/registros/1"}
+        }
+      ]
+    },
+    {
+      "name": "Profissionais",
+      "item": [
+        {"name": "Listar profissionais", "request": {"method": "GET", "url": "{{baseUrl}}/profissionais"}},
+        {"name": "Buscar profissional por ID", "request": {"method": "GET", "url": "{{baseUrl}}/profissionais/1"}},
+        {
+          "name": "Criar profissional",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\n  \"nome\": \"Dra. Maria Souza\",\n  \"email\": \"maria@example.com\",\n  \"registroProfissional\": \"CRP 12345\",\n  \"especialidadesIds\": [1,2]\n}"},
+            "url": "{{baseUrl}}/profissionais"
+          }
+        },
+        {
+          "name": "Atualizar profissional",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\n  \"nome\": \"Dra. Maria Souza\",\n  \"email\": \"maria.nova@example.com\",\n  \"registroProfissional\": \"CRP 12345\",\n  \"especialidadesIds\": [1]\n}"},
+            "url": "{{baseUrl}}/profissionais/1"
+          }
+        },
+        {
+          "name": "Vincular especialidade ao profissional",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/profissionais/1/especialidades/1"
+          }
+        },
+        {"name": "Remover profissional", "request": {"method": "DELETE", "url": "{{baseUrl}}/profissionais/1"}}
+      ]
+    },
+    {
+      "name": "Especialidades",
+      "item": [
+        {"name": "Listar especialidades", "request": {"method": "GET", "url": "{{baseUrl}}/especialidades"}},
+        {"name": "Buscar especialidade por ID", "request": {"method": "GET", "url": "{{baseUrl}}/especialidades/1"}},
+        {
+          "name": "Criar especialidade",
+          "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\n  \"nome\": \"Psicologia\",\n  \"descricao\": \"Atendimento clínico\"\n}"},
+            "url": "{{baseUrl}}/especialidades"}
+        },
+        {
+          "name": "Atualizar especialidade",
+          "request": {"method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\n  \"nome\": \"Psicologia Clínica\",\n  \"descricao\": \"Atendimento adulto\"\n}"},
+            "url": "{{baseUrl}}/especialidades/1"}
+        },
+        {"name": "Remover especialidade", "request": {"method": "DELETE", "url": "{{baseUrl}}/especialidades/1"}}
+      ]
+    },
+    {
+      "name": "Consultas",
+      "item": [
+        {"name": "Listar consultas", "request": {"method": "GET", "url": "{{baseUrl}}/consultas"}},
+        {"name": "Buscar consulta por ID", "request": {"method": "GET", "url": "{{baseUrl}}/consultas/1"}},
+        {"name": "Listar por paciente", "request": {"method": "GET", "url": "{{baseUrl}}/pacientes/1/consultas"}},
+        {"name": "Listar por profissional", "request": {"method": "GET", "url": "{{baseUrl}}/profissionais/1/consultas"}},
+        {
+          "name": "Criar consulta",
+          "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\n  \"dataHora\": \"2025-12-05T14:00:00\",\n  \"observacao\": \"Primeira consulta\",\n  \"pacienteId\": 1,\n  \"profissionalId\": 1\n}"},
+            "url": "{{baseUrl}}/consultas"}
+        },
+        {
+          "name": "Atualizar consulta",
+          "request": {"method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\n  \"dataHora\": \"2025-12-05T15:00:00\",\n  \"observacao\": \"Remarcada\",\n  \"pacienteId\": 1,\n  \"profissionalId\": 1\n}"},
+            "url": "{{baseUrl}}/consultas/1"}
+        },
+        {"name": "Cancelar consulta", "request": {"method": "POST", "url": "{{baseUrl}}/consultas/1/cancelar"}},
+        {"name": "Marcar consulta como realizada", "request": {"method": "POST", "url": "{{baseUrl}}/consultas/1/realizar"}},
+        {"name": "Remover consulta", "request": {"method": "DELETE", "url": "{{baseUrl}}/consultas/1"}}
+      ]
+    },
+    {
+      "name": "Condições do Paciente",
+      "item": [
+        {"name": "Listar condições por paciente", "request": {"method": "GET", "url": "{{baseUrl}}/pacientes/1/condicoes"}},
+        {
+          "name": "Criar condição para paciente",
+          "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\n  \"nome\": \"Ansiedade\",\n  \"descricao\": \"Sintomas de ansiedade generalizada\",\n  \"severidade\": \"MODERADA\",\n  \"dataDiagnostico\": \"2024-11-01\"\n}"},
+            "url": "{{baseUrl}}/pacientes/1/condicoes"}
+        },
+        {"name": "Buscar condição por ID", "request": {"method": "GET", "url": "{{baseUrl}}/condicoes/1"}},
+        {
+          "name": "Atualizar condição",
+          "request": {"method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\n  \"nome\": \"Ansiedade\",\n  \"descricao\": \"Episódios menos frequentes\",\n  \"severidade\": \"LEVE\",\n  \"dataDiagnostico\": \"2024-11-01\"\n}"},
+            "url": "{{baseUrl}}/condicoes/1"}
+        },
+        {"name": "Remover condição", "request": {"method": "DELETE", "url": "{{baseUrl}}/condicoes/1"}}
+      ]
+    },
+    {
+      "name": "Recursos de Apoio",
+      "item": [
+        {"name": "Listar recursos (com filtro opcional por tipo)", "request": {"method": "GET", "url": "{{baseUrl}}/recursos?tipo=VIDEO"}},
+        {"name": "Buscar recurso por ID", "request": {"method": "GET", "url": "{{baseUrl}}/recursos/1"}},
+        {
+          "name": "Criar recurso (opcional profissionalId)",
+          "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\n  \"titulo\": \"Meditação Guiada\",\n  \"tipo\": \"VIDEO\",\n  \"descricao\": \"Guia de 10 minutos\",\n  \"url\": \"https://example.com/video\"\n}"},
+            "url": "{{baseUrl}}/recursos?profissionalId=1"}
+        },
+        {
+          "name": "Atualizar recurso (opcional profissionalId)",
+          "request": {"method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\n  \"titulo\": \"Meditação Guiada Avançada\",\n  \"tipo\": \"VIDEO\",\n  \"descricao\": \"Guia de 15 minutos\",\n  \"url\": \"https://example.com/video-2\"\n}"},
+            "url": "{{baseUrl}}/recursos/1?profissionalId=1"}
+        },
+        {"name": "Remover recurso", "request": {"method": "DELETE", "url": "{{baseUrl}}/recursos/1"}}
+      ]
+    },
+    {
+      "name": "Raiz",
+      "item": [
+        {"name": "Health root (/)", "request": {"method": "GET", "url": "{{baseUrl}}/"}}
+      ]
+    }
+  ],
+  "variable": [
+    {"key": "baseUrl", "value": "http://localhost:8080"}
+  ]
+}
